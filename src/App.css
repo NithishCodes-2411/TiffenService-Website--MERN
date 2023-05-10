@@ -1,6 +1,276 @@
-
-body{
-  padding: 0;
-  margin: 0 ;
+@font-face
+{
+  font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 200;
+    src: local("Source Sans Pro ExtraLight"), local("SourceSansPro-ExtraLight"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGEzfSP8PFPIaW8d4wHl9LSw.woff") format("woff");
 }
+
+@font-face
+{
+  font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlDLXPPWpYIJRcQ99gLLWTOQ.woff") format("woff");
+}
+
+@font-face
+{
+  font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 600;
+    src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNF2eBBnhZOFf_rblGEjGiI.woff") format("woff");
+}
+
+@font-face
+{
+  font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGBgDywzySrQSFSEUM6OqW_g.woff") format("woff");
+}
+
+
+	
+/* 02. GENERALS SETTINGS ================================================== */
+
+
+body, html
+{
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  height: 100%;
+  margin: 0;
+  -webkit-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+
+
+/* Selected text Color */
+
+::-moz-selection
+{
+  background: none;
+  color: #74BEE1;
+}
+
+::selection
+{
+  background: none;
+  color: #74BEE1;
+}
+
+.centered
+{
+  text-align: center;
+}
+
+b, strong
+{
+  font-weight: 800;
+}
+
+/* Make a space */
+
+.space
+{
+  padding: 20px 0;
+}
+
+h1
+{
+  color: Black ;
+  font-size: 46px;
+  font-weight: 100;
+  text-transform: none;
+  line-height: 46px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 0.33em;
+  margin-bottom: 0.33em;
+}
+
+h2
+{
+  font-size: 46px;
+  font-weight: 100;
+  line-height: 46px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 0.33em;
+}
+
+h3
+{
+  font: 38px 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  padding-bottom: 25px;
+  padding-top: 0px;
+  color: #202529;
+}
+
+h4
+{
+  font: 32px 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-weight: 100;
+  padding-bottom: 15px;
+}
+
+h5
+{
+  font: 24px 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-weight: 100;
+  color: #FFF;
+}
+
+span
+{
+  color: #303333;
+  font: 1.5em 'Source Sans Pro', sans-serif;
+  opacity: 0.4;
+  padding-top: 0px;
+}
+
+/* Link */
+
+a
+{
+  color: #46484a;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover
+{
+  color: #181b1e;
+}  
+	
+/* Paragrah */
+
+p
+{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  color: #98999C;
+  line-height: 30px;
+}
+
+p a
+{
+  border-bottom: 1px dotted #46484a;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+p a:hover
+{
+  border-bottom: 1px dotted #181b1e;
+}
+
+/* Button White */
+
+.button-white
+{
+  border-radius: 20px;
+  color: #333;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  background: #FFF;
+  font-weight: 600;
+  border: 3px solid #FFF;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button White:hover */
+
+.button-white:hover
+{
+  color: #FFF;
+  border: 3px solid #FFF;
+  background: none;
+}
+
+/* Button Blue */
+
+.button-blue
+{
+  border-radius: 20px;
+  color: #FFF;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  background: #2fd992;
+  font-weight: 600;
+  border: 3px solid #007a39;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button Blue:hover */
+
+.button-blue:hover
+{
+  color: #2fd992;
+  border: 3px solid #2fd992;
+  background: none;
+}
+
+
+/* Button Green */
+
+.button-green
+{
+  border-radius: 20px;
+  color: #FFF;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  background: #95d074;
+  font-weight: 600;
+  border: 3px solid #95d074;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button Green:hover */
+
+.button-green:hover
+{
+  color: #95d074;
+  border: 3px solid #95d074;
+  background: none;
+}
+
+
+
+
 

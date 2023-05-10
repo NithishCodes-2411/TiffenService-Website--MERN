@@ -1,0 +1,76 @@
+#portfolio{
+    padding:50px 0;
+}
+.workList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+.work img{
+    border-radius: 25px;
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),rgb(17, 87, 1));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    padding: 0 40px;
+    text-align: center;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: aliceblue;
+    margin-right: 80px;
+}
+.layer p{
+
+    font-size: 20px;
+    color: white;
+    margin-right: 80px;
+}
+
+/*.layer a{
+    margin-top: 20px;
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: red;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}*/
+.work:hover img {
+    transform: scale(1.05);
+    
+
+}
+.work:hover .layer{
+    height: 100%;
+}
+.subTitles{
+    text-align: center;
+}
+

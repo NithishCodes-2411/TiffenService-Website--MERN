@@ -1,93 +1,151 @@
 
-    .header{
-        display: flex;
-        padding-left: 24px;
-        width: 100%;
-        text-align: center;
-    }
-    .right{
-        padding: 50px 0px;
-        width: 50%;
-        margin-top: 0px;
-        justify-content: end;
-        margin-right: 0px;
-    }
-    .navbutton{
-        background-color: rgb(8, 136, 78);
-        color: white;
-        color: white;
-        height: 150%;
-        width: 35%;
-        font-size: large;
-        border-radius: 4px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        cursor: pointer;    
-    }
-    .navbutton:hover{
-        background-color: rgb(6, 122, 70);;
-    }
-    .left{
-        width: 50%;
-        padding-top: 20px;
- 
-    }   
+/*nav #logo
+{
+  float: left;
+  z-index: 99999;
+  position: relative;
+  left: 50px;
+}*/
 
-    .home{
-        background-image: url('../assets\ /IMG_3495.jpg');
-        height: 100vh;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        position: fixed;
-    }
-
-    img{
-        z-index: 1;
-    }
-    .container{
-        background-color: white;
-        color: black;
-        width: 30%;
-        margin-left: 90px;
-        text-align: center;
-        position: relative;
-        margin-top: 170px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border-radius: 4px;
-    }
-    .p1{
-        font-size: 32px;
-    }
-    
-
-    .weekplan button,.dailyplan button{
-        width: 100%;
-        height: 50px;
-        border-radius: 5px;
-    }
-    .weekplan button:hover, .dailyplan button:hover{
-        background-color: rgb(68, 190, 68);
-    }
-    .weekplan,.dailyplan{
-        display: flex;
-        flex-direction: row;
-    }
-
-
-@media screen and (max-width: 700px) {
-    .left{
-        display: none;
-   
-    }
-
-    button{
-        font-size: small;
-        width: 60%;
-        height: 150%;
-    }
-
+nav
+{
+  z-index: 999;
+  width: 100%;
+  height: 80px;
 }
 
+
+/* The main navigation bar */
+
+#nav
+{
+  width: 100%;
+  position: relative;
+  right: 50px;
+ /* The menu will take the width of its container */
+  ;
+}
+
+/* The main navigation links */
+
+#nav>li>a
+{
+	/* Layout */
+  display: block;
+	/* Typography */
+  font-size: 25px;
+  font-weight: 200;
+  text-transform: uppercase;
+  float: right;
+  color: #FFF;
+  opacity: 1;
+  position: relative;
+  padding: 20px 15px;
+  text-decoration: none;
+}
+
+/* The hover state of the links */
+
+#nav li:hover a, #nav li .selected
+{
+  color: rgba(255,255,255,0.60);
+}
+
+ 
+/* Navigation Fixed */ 
+ 
+.cbp-af-header
+{
+  font-family: 'Source Sans Pro', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  height: 80px;
+  overflow: hidden;
+  -webkit-transition: height 0.6s;
+  -moz-transition: height 0.6s;
+  transition: height 0.6s;
+}
+
+.cbp-af-header #logo img
+{
+  padding: 40px 20px 0px 0px;
+  max-width: 150px;
+}
+
+.cbp-af-header #nav a
+{
+  line-height: 60px;
+}
+
+/* Transitions */
+
+.cbp-af-header #logo,
+.cbp-af-header #nav a
+{
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+/* Button Share */
+
+.cbp-af-header .right
+{
+  border-radius: 20px;
+  color: #333;
+  margin-top: -100px;
+  padding: 3px 13px;
+  float: right;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button Share:hover */
+
+.cbp-af-header .button:hover
+{
+  color: #FFF;
+  border: 3px solid #FFF;
+  background: none;
+}
+
+
+/* Navigation effect on scroll down */
+
+
+.cbp-af-header.cbp-af-header-shrink
+{
+  height: 80px;
+  float: right;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* The button comes to the right place */
+
+.cbp-af-header.cbp-af-header-shrink .right
+{
+  margin-top: 30px;
+  display: block;
+}
+
+/* The links goes up */
+
+.cbp-af-header.cbp-af-header-shrink #nav a
+{
+  margin-top: -150px;
+}
+	
 
 
 
