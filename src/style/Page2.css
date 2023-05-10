@@ -2,6 +2,7 @@
 .page2 {
     background: #FFF;
     text-align: center;
+
 }
 
 
@@ -34,7 +35,7 @@
 
 
 
-/* 06. PAGE 3 SETTINGS ================================================== */
+/* 06. PAGE 3 SETTINGS ========================
 
 
 
@@ -47,14 +48,14 @@
 	border-bottom: 1px solid #e7e9eb;  
 	padding: 80px 0;}
 
-/* Image */
+/* Imag
 
 .page3 .picture {
 	position: relative; 
 	width: 100%;  
 	overflow: hidden;  }
 
-/* Article */
+/* Article
 
 .page3 .article {
 	position: absolute;
@@ -69,7 +70,7 @@
 
 
 
-/* 07. PAGE 4 SETTINGS ================================================== */
+/* 07. PAGE 4 SETTINGS =============================
 
 
 
@@ -80,7 +81,7 @@
 	position: relative; 
 	padding: 80px 0; }
 
-/* Image */
+/* Image *
 
 .page4 .picture {
 	position: relative; 
@@ -88,7 +89,7 @@
 	overflow: hidden; 
 	float: right; }
 
-/* Article */
+/* Artic
 
 .page4 .article {
 	position: absolute;
@@ -102,8 +103,7 @@
 
 
 
-/* 08. PAGE 5 SETTINGS ================================================== */
-
+/* 08. PAGE 5 SETTINGS ====================================
 
 .page5 {
     background: #f1f3f4;
@@ -114,10 +114,10 @@
 
 
 
-/* 09. PRELOADING  ================================================== */
+/* 09. PRELOADING  ==========================================
     
 
-/* Preloader Effect */
+/* Preloader Effe
 
 #preloader {
     background-color: #FFF;
@@ -129,7 +129,7 @@
     z-index: 999999;
 }
 
-/* Preloading Animation */
+/* Preloading Animati
 
 #loading-animation {
 
@@ -145,7 +145,7 @@
 }
 
 
-/* 10. FOOTER SETTINGS  ================================================== */
+/* 10. FOOTER SETTINGS  ========================================
 
 
 
@@ -182,7 +182,7 @@
 .footer p a:hover {color: rgba(255,255,255,1);}
 
 
-/* 11 PRE CODE ================================================= */
+/* 11 PRE CODE =============================================
 
 
 pre {
@@ -194,7 +194,7 @@ pre {
 	color:#ecd565;}
 
 
-/* 12 MODAL SETTINGS ================================================= */
+/* 12 MODAL SETTINGS ===================================
 
 
 .modal {
@@ -264,7 +264,7 @@ pre {
 
 
 
-/* 13. MEDIA QUERIES  ============================================ */
+. MEDIA QUERIES  ============================================ */
 
 
 

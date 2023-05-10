@@ -2,24 +2,35 @@ import React from 'react';
 import { useState } from 'react';
 import '../style/Carousel.css';
 import { menu } from '../CarouselData';
-import menuPic from '../images/wooden-board-empty-table-top-blurred-background.jpg';
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 
 function Carousel(){
+
+    const [current , setCurrent] = useState(0);
+
   
     return (
-
+        <>
+        <h1 className='heading'>Menu options</h1>
         <div className='carousel'>
             <div className='carouselInner' >
 
-                <div className='left'> </div>
-                <div className='centre'> </div>
-                <div className='right'> </div>
+                <div className='left' onClick={ ()=>{ current > 0  && setCurrent(current-1)}}><ArrowBackIosIcon style={{fontSize: 30}} /></div>
+
+                <div className='centre'>
+                    <p className='para'>{menu[current].menuu}</p>
+                    <h1 className='head'> <b> {menu[current].title} </b> </h1>
+                 </div>
+
+                <div className='right' onClick={ ()=>{ current <  5 && setCurrent(current+1)}}> <ArrowForwardIosIcon style={{fontSize: 30}}/></div>
 
             </div>
 
         </div>
+
+        </>
     )
 } 
 export default Carousel;
