@@ -11,13 +11,14 @@ function TheGreenChutney() {
             <section className="page2">
                 <div className="row">
                     <div className="six columns article make-it-appear-right">
+                        <h3>The Green Chutney</h3>
 
-                        <p>Our enterprise began with a single purpose, one that we are proud and grateful to be honoring nearly three years later - <br></br>
-                            making Indian cuisine accessible to the city of Halifax, Nova Scotia. Since 2020, we have emerged from the pandemic as one <br></br>of 
-                            the largest family-run businesses in the city, having served over 200 customers. Our menu is highly customizable and offers an array <br></br> of dishes
-                            cooked up from fresh ingredients daily. We hope to convey that tradition can be implemented through modern, hygienic practices.<br></br>
-                             We are proud of our work and offer you our services - you shall not be disappointed. 
-                             </p>
+                        <p>Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank. <br></br> tongue corned beef rump pork loin shank meatball capicola turducken venison shankle kevin pancetta tri-tip boudin.</p>
+                        <p>Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank. <br></br> tongue corned beef rump pork loin shank meatball capicola turducken venison shankle kevin pancetta tri-tip boudin.</p>
+                        <p>Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank. <br></br> tongue corned beef rump pork loin shank meatball capicola turducken venison shankle kevin pancetta tri-tip boudin.</p>
+                        <p>Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank. <br></br> tongue corned beef rump pork loin shank meatball capicola turducken venison shankle kevin pancetta tri-tip boudin.</p>
+                        <p>Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank. <br></br> tongue corned beef rump pork loin shank meatball capicola turducken venison shankle kevin pancetta tri-tip boudin.</p>
+
                         <div className="space"></div>
 
                         <a className="button-blue">Explore our plans</a>

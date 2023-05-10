@@ -8,7 +8,6 @@ import Pic3 from '../images/plan4.jpg';
 
 
 function Plans(){
-    
     return (
 
     <div id="portfolio">

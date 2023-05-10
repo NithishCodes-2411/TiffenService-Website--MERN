@@ -18,35 +18,18 @@
 .left {
     flex: 5%;
     height: 100%;
-    background-color: rgb(0, 0, 0 , 0.6);
+    background-color: black;
     display: grid;
     place-items: centre;
-    color: white ;
-    display: grid;
-    place-items: center;
-   
 }
 
 .centre {
     flex: 80%;
     height: 100%;
-    display: grid;
-    place-items: center;
-    ;
 }
 
 .right {
     flex: 5%;
     height: 100%;
-    background-color: rgb(0, 0, 0 , 0.6);
-    color: white ;
-    display: grid;
-    place-items: center;
-}
-
-.head{
-    color:wheat;
-}
-.heading{
-    text-align: center;
+    background-color: black;
 }
