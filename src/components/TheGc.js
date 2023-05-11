@@ -3,7 +3,9 @@ import { Typography, Box, keyframes } from "@mui/material";
 import { useState, useEffect } from "react";
 import '../style/TheGc.css';
 
-const textShadowPopBr = keyframes`
+
+
+/*const textShadowPopBr = keyframes`
   0% {
     text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
     -webkit-transform: translateX(0) translateY(0);
@@ -14,7 +16,7 @@ const textShadowPopBr = keyframes`
     -webkit-transform: translateX(-8px) translateY(-8px);
             transform: translateX(-8px) translateY(-8px);
   }
-`;
+`;*/
 
 const rollInLeft = keyframes`
   0% {
@@ -31,44 +33,51 @@ const rollInLeft = keyframes`
 `;
 
 const Holder = styled(Box)(({ roll }) => ({
-    width: "400px",
-    height: "75px",
-    background: "#00adb5",
-    borderRadius: "20px",
-    display: "flex",
-    marginLeft: "37%",
-    marginBottom: "45px",
-    marginTop: "45px",
-    justifyContent: "center",
-    alignItems: "center",
-    visibility: !roll && "hidden",
-    animation: roll && `${rollInLeft} 0.6s ease-out both`
+  width: "400px",
+  height: "75px",
+  borderRadius: "20px",
+  display: "flex",
+  marginLeft: "500px",
+  marginBottom: "45px",
+  marginTop: "45px",
+  justifyContent: "center",
+  alignItems: "center",
+  visibility: !roll && "hidden",
+  animation: roll && `${rollInLeft} 0.6s ease-out both`,
 }));
 
-const Title = styled(Typography)(() => ({
-    color: '#eee',
-    '&:hover': {
-        animation: `${textShadowPopBr} 0.6s both`
-    }
-}))
-
+/*const Title = styled(Typography)(() => ({
+  color: '#eee',
+  '&:hover': {
+    animation: `${textShadowPopBr} 0.6s both`
+  }
+}))*/
 function TheGc() {
 
-    const [roll, setRoll] = useState(false);
+  const [roll, setRoll] = useState(false);
 
-    useEffect(() => {
-        setTimeout(() => {
-            // animation
-            setRoll(true);
-        }, 500);
-    }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      // animation
+      setRoll(true);
+    }, 500);
+  }, []);
 
-    return (
-        <>
-            <Holder roll={roll}>
-                <Title variant="h4">The GreenChutney</Title>
-            </Holder>
-        </>
-    )
+  return (
+    <>
+      <Holder roll={roll}>
+        <div class="containerr">
+          <div class="veiw-box">
+            <div id="testimonials">
+              <div class="user">
+                <p>We prioritize the customer over anything.</p>
+                <h3>- Ashoo Arora , Founder. </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Holder>
+    </>
+  )
 }
 export default TheGc;

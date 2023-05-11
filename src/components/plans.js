@@ -18,7 +18,7 @@ function Plans(){
                 <div class="work">
                     <img src = {pic1}></img>
                     <div className = "layer ">
-                        <h3>#Plan 1</h3>
+                        <h3> Plan 1</h3>
                         <p>5 meals / Week<br></br>
                         $250 / Month</p>
                     </div>
@@ -26,15 +26,15 @@ function Plans(){
                 <div className="work">
                     <img src = {Pic2}></img>
                     <div className = "layer ">
-                        <h3>#Plan 2</h3>
+                        <h3>Plan 2</h3>
                         <p>6 meals / Week<br></br>
-                        $250 / Month</p>
+                        $300 / Month</p>
                     </div>
                 </div>
                 <div className="work">
                     <img src = {Pic3}></img>
                     <div className = "layer ">
-                        <h3>#Trail plan</h3>
+                        <h3>Trial plan</h3>
                         <p>$15 / meal </p>
                     </div>
                 </div>

@@ -10,6 +10,7 @@ function TheGreenChutney() {
 
             <section className="page2">
                 <div className="row">
+                    <h1>The Green Chutney</h1>
                     <div className="six columns article make-it-appear-right">
 
                         <p>Our enterprise began with a single purpose, one that we are proud and grateful to be honoring nearly three years later - <br></br>
@@ -20,7 +21,6 @@ function TheGreenChutney() {
                              </p>
                         <div className="space"></div>
 
-                        <a className="button-blue">Explore our plans</a>
                     </div>
                 </div>
             </section>

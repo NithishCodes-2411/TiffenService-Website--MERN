@@ -20,7 +20,14 @@ function Carousel(){
                 <div className='left' onClick={ ()=>{ current > 0  && setCurrent(current-1)}}><ArrowBackIosIcon style={{fontSize: 30}} /></div>
 
                 <div className='centre'>
-                    <p className='para'>{menu[current].menuu}</p>
+                    <p >
+                    <h5 className='para'>
+                        {menu[current].menuu1} <br></br>
+                        {menu[current].menuu2} <br></br>
+                        {menu[current].menuu3} <br></br>
+                        {menu[current].menuu4}
+                    </h5>    
+                    </p>
                     <h1 className='head'> <b> {menu[current].title} </b> </h1>
                  </div>
 

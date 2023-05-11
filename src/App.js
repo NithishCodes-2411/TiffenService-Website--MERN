@@ -6,8 +6,8 @@ import './style/Navbar.css';
 import TheGreenChutney from './components/Page2';
 import Plans from './components/plans';
 import  Carousel  from './components/Carousel.js';
-
-
+import TheGc from './components/TheGc';
+import Reviews from './components/Reviews';
 
 function App() {
 
@@ -15,12 +15,17 @@ function App() {
     <div className="App">
    
       <HomePage/>
+
       <TheGreenChutney/>
       <Plans/> 
-      <Carousel/> 
+      <Carousel/>
+      <TheGc/> 
+  
     </div>
   );
 
 }
 
 export default App;
+
+
