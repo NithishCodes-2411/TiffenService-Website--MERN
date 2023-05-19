@@ -1,7 +1,9 @@
 .carousel{
     width:60%;
     height: 500px;
+    border-radius: 20px;
     margin-left: 20%;
+ 
 }
 .carouselInner{
     height: 100%;
@@ -11,6 +13,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    border-radius: 20px;
+    
 }
 
 .left {
@@ -22,6 +26,7 @@
     color: white ;
     display: grid;
     place-items: center;
+    border-radius: 20px;
 }
 
 .centre {
@@ -39,6 +44,7 @@
     color: white ;
     display: grid;
     place-items: center;
+    border-radius: 20px;
 }
 
 .head{
@@ -71,3 +77,6 @@
         margin-left: 10%;
     }  
 }
+
+
+

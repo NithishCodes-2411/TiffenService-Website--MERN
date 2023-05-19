@@ -160,7 +160,7 @@ p
   font-weight: 200;
   color: #98999C;
   line-height: 30px;
-  text-align: center;
+ 
 }
 
 p a
@@ -208,68 +208,10 @@ p a:hover
   background: none;
 }
 
-/* Button Blue */
-
-.button-blue
-{
-  border-radius: 20px;
-  color: #FFF;
-  padding: 10px 20px;
-  letter-spacing: 2px;
-  background: #2fd992;
-  font-weight: 600;
-  border: 3px solid #007a39;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 12px;
-  text-align: center;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-/* Button Blue:hover */
-
-.button-blue:hover
-{
-  color: #2fd992;
-  border: 3px solid #2fd992;
-  background: none;
-}
 
 
-/* Button Green */
 
-.button-green
-{
-  border-radius: 20px;
-  color: #FFF;
-  padding: 10px 20px;
-  letter-spacing: 2px;
-  background: #95d074;
-  font-weight: 600;
-  border: 3px solid #95d074;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 12px;
-  text-align: center;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-/* Button Green:hover */
-
-.button-green:hover
-{
-  color: #95d074;
-  border: 3px solid #95d074;
-  background: none;
-}
+  
 
 
 

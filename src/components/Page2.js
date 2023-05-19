@@ -11,6 +11,8 @@ function TheGreenChutney() {
             <section className="page2">
                 <div className="row">
                     <h1>The Green Chutney</h1>
+                    <br></br>
+        
                     <div className="six columns article make-it-appear-right">
 
                         <p>Our enterprise began with a single purpose, one that we are proud and grateful to be honoring nearly three years later - <br></br>

@@ -8,6 +8,7 @@ import Plans from './components/plans';
 import  Carousel  from './components/Carousel.js';
 import TheGc from './components/TheGc';
 import Reviews from './components/Reviews';
+import Contact from './components/Footer';
 
 function App() {
 
@@ -19,8 +20,10 @@ function App() {
       <TheGreenChutney/>
       <Plans/> 
       <Carousel/>
-      <TheGc/> 
-  
+      <Contact/>
+
+      
+
     </div>
   );
 

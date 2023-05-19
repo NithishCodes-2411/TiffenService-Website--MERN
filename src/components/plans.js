@@ -1,9 +1,9 @@
 import react from 'react';
-import aboutpic from '../images/aboutUs.jpg';
 import '../style/plans.css';
 import pic1 from '../images/plan1.jpg';
 import Pic2 from '../images/plan2.jpg';
 import Pic3 from '../images/plan4.jpg';
+
 
 
 
