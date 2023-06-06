@@ -13,6 +13,7 @@ function Carousel(){
   
     return (
         <>
+     
         <h1 className='heading'>Menu options</h1>
         <div className='carousel'>
             <div className='carouselInner' >
@@ -36,6 +37,7 @@ function Carousel(){
             </div>
 
         </div>
+
 
         </>
     )

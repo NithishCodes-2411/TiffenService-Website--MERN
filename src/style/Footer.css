@@ -3,16 +3,7 @@ h1{
     text-align: center;
 }
   
-  .contactLeft {
-    flex-basis: 35%;
-    text-align: left 30% ;
-    color: white;
-    border-radius: 20px;
-    font-size: 20px;
-  }
-  
   .contactRight {
-    flex-basis: 60%;
     opacity: 0.5;
     border-radius: 20px;
     font-size: 20px;
@@ -21,10 +12,6 @@ h1{
     margin-left: 30%;
   }
  
- 
-
-
-  
   form input , form textarea{
     width: 100%;
     border: 10px;
@@ -34,46 +21,45 @@ h1{
     border-radius: 6px;
     color:#000000;
     border-radius: 6px;
-
-    
-
   }
-.footer {
-  background: #181b1e;
-  padding: 30px 0;}
 
-.footer .row {position: relative;}
-
-.footer ul {padding:40px 0;}
-
-.footer ul li {
-  display: inline-block;
-  padding: 0 20px;
-  font-weight: 200;
-  font-size: 18px;
-}
-
-.footer ul li a {color: #FFF;}
-
-.footer ul li a:hover {color: rgba(255,255,255,0.70);}
-
-.footer .copyright {
-  opacity: 0.8;
-}
-
-.footer .logo {
-opacity: 0.4;
-width:80px;
-padding: 40px 0 0 0;
-}
-
-.footer p a {color: rgba(255,255,255,0.70);}
-.footer p a:hover {color: rgba(255,255,255,1);}
-
-.footer{
-  margin-top: 200px;
-
-}
-.footerHead{
-  color: #FFF;
-}
+  
+  .footer {
+    background: #181b1e;
+    padding: 30px 0;}
+  
+  .footer .row {position: relative;}
+  
+  .footer ul {padding:40px 0;}
+  
+  .footer ul li {
+    display: inline-block;
+    padding: 0 20px;
+    font-weight: 200;
+    font-size: 18px;
+  }
+  
+  .footer ul li a {color: #FFF;}
+  
+  .footer ul li a:hover {color: rgba(255,255,255,0.70);}
+  
+  .footer .copyright {
+    opacity: 0.8;
+  }
+  
+  .footer .logo {
+  opacity: 0.4;
+  width:80px;
+  padding: 40px 0 0 0;
+  }
+  
+  .footer p a {color: rgba(255,255,255,0.70);}
+  .footer p a:hover {color: rgba(255,255,255,1);}
+  
+  .footer{
+    margin-top: 200px;
+  
+  }
+  .footerHead{
+    color: #FFF;
+  }

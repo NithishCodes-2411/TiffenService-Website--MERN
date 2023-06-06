@@ -1,28 +1,30 @@
- 
-import './App.css';
-import Navbar from './components/Navbar';
-import HomePage from './components/Home';
-import './style/Navbar.css';
-import TheGreenChutney from './components/Page2';
-import Plans from './components/plans';
-import  Carousel  from './components/Carousel.js';
-import TheGc from './components/TheGc';
-import Reviews from './components/Reviews';
-import Contact from './components/Footer';
+
+import './App.css';    
+import Login from './components/Login';
+import Signup from './components/SignUp';
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LandingPage from './pages/LandingPage';
+
+
 
 function App() {
 
   return (
     <div className="App">
-   
-      <HomePage/>
 
-      <TheGreenChutney/>
-      <Plans/> 
-      <Carousel/>
-      <Contact/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path = "/Signup" element = {<Signup/>}/>
+        </Routes>
 
-      
+      </BrowserRouter>
+
+
+
+
 
     </div>
   );
