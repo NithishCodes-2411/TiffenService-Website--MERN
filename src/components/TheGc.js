@@ -66,10 +66,10 @@ function TheGc() {
   return (
     <>
       <Holder roll={roll}>
-        <div class="containerr">
-          <div class="veiw-box">
+        <div className="containerr">
+          <div className="veiw-box">
             <div id="testimonials">
-              <div class="user">
+              <div className="user">
                 <p>We prioritize the customer over anything.</p>
                 <h3>- Ashoo Arora , Founder. </h3>
               </div>

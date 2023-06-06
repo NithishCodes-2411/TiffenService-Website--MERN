@@ -1,5 +1,4 @@
-const { Security } = require("@mui/icons-material");
-const moongose = require ("mongoose");
+const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema({
     firstName:{
@@ -25,13 +24,9 @@ const userSchema = mongoose.Schema({
     address : {
         type : String ,
         required : false
-    },
-    SecurityQuestionOne :{
-        type : String ,
-        required : true 
-    },
-    SecurityQuestionTwo : {
-        type : String ,
-        required : true
     }
-})
+});
+
+const User = new mongoose.model("user", userSchema);
+
+module.exports = user;
