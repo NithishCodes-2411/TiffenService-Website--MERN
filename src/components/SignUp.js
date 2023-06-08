@@ -2,6 +2,7 @@ import react from 'react';
 import {useState} from 'react';
 import axios, { Axios } from 'axios';
 import '../style/SignUp.css';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
 
@@ -18,9 +19,14 @@ function Signup() {
     const [phnNumber, setPhnNumber] = useState("");
     const [phnNumberError, setPhnNumbeError] = useState("");
     const [address, setAddress] = useState("");
+    const [securityQuestionOne, setSecurityQuestionOne] = useState("");
+    const [securityQuestionOneError, setSecurityQuestionOneError] = useState("");
     const [registerError , setRegisterError] =  useState("");
 
+    const naviagte = useNavigate();
 
+
+  
 
 
     /* This function gets Called when an input is entered for the firstName filed*/
@@ -30,17 +36,19 @@ function Signup() {
         let fNameRegex = /^[a-zA-Z ]+$/;
         let error = "";
 
-        if (fName.trim()) {
+        if (!fName.trim()) {
             error = "First Name cannot be empty";
+            setFirstNameError(error)
         }
         else if (!fNameRegex.test(fName)) {
             error = "First Name should only  have alphabets";
+            setFirstNameError(error)
         }
         else {
             setFirstName(fName);
             setFirstNameError("");
         }
-        setFirstNameError(error)
+ 
     };
 
 
@@ -51,17 +59,19 @@ function Signup() {
         let lNameRegex = /^[a-zA-Z ]+$/;
         let error = "";
 
-        if (lName.trim()) {
+        if (!lName.trim()) {
             error = "Last Name cannot be empty";
+            setLastNameError(error);
         }
         else if (!lNameRegex.test(lName)) {
             error = "Last Name should only  have alphabets";
+            setLastNameError(error);
         }
         else {
             setLastName(lName);
             setLastNameError("");
         }
-        setLastNameError(error);
+       
     }
 
 
@@ -74,13 +84,15 @@ function Signup() {
 
         if (!email.trim()) {
             error = "Email Address cannot be empty";
+            setEmailAddressError(error);
         } else if (!emailRegex.test(email)) {
             error = "Email Address doesn't match criteria, ex: xyz@outlook.com";
+            setEmailAddressError(error);
         } else {
             setEmailAddress(email);
             setEmailAddressError("");
         }
-        setEmailAddressError(error);
+  
     }
 
 
@@ -101,11 +113,13 @@ const handlePassWord = (e) => {
         "at least one lowercase letter,\n" +
         "at least one uppercase letter, \n" +
         "at least one special character ";
+        setPasswordError(error);
     }
     else{
         setPassword(passwordVal);
+        setPasswordError("");
     }
-    setPasswordError(error);
+
 }
 
 
@@ -116,12 +130,15 @@ const handleConfirmPassword = (e) => {
     let error = "";
     if(!confirmPass.trim()){
         error = "confirm password cannot be empty";
+        SetconfirmPasswordError(error);
     }
     else if (password !== confirmPass){
-        error = "Password  does not match"
+        error = "Password  does not match";
+        SetconfirmPasswordError(error);
     }
     else{
         setConfirmPassword(confirmPass);
+        SetconfirmPasswordError("");
     }
 }
 
@@ -135,11 +152,13 @@ const handlePhoneNumber = (e) => {
 
     if(!phNumRegex.test(phNum)){
         error = "Phone number should only contain 10 digits";
+        setPhnNumbeError(error);
     }
     else {
         setPhnNumber(phNum);
+        setPhnNumbeError("");
     }
-    setPhnNumbeError(error);
+  
 }
 
 
@@ -152,20 +171,55 @@ const handleAdress = (e) => {
     }
     else{
         setAddress(add);
+        setEmailAddressError("")
     }
 }
 
-const handleSubmit = async() => {
+const  handleQ1 = (e) => {
 
-    console.log({ firstName ,
+    setRegisterError("");
+    let sq = e.target.value;
+    let sqRegex = /^[a-zA-Z ]+$/;
+    let error = "";
+    if(!sqTwo.trim()) {
+        error = "Security Question Answer cannot be empty";
+        setSecurityQuestionOneError(error);
+      
+    } else if(!sqTwoRegex.test(sqTwo)) {
+        error = "Security Question Answer should only have alphabets";
+        setSecurityQuestionOneError(error);
+      
+    }else{
+        setSecurityQuestionOneError("");
+        setSecurityQuestionOne(sq);
+    }
+
+}
+
+const handleSubmit = () => {
+
+   console.log({ firstName ,
         lastName ,
         emailAddress ,
         password  ,
         phnNumber  ,
         address});
 
- 
-        axios.post("/verifyUser" , {emailAddress : emailAddress}).then(res => {
+        setFirstName("");
+        setLastName("");
+        setEmailAddress("");
+        setPassword("");
+        setPhnNumber("");
+        setAddress("");
+        setFirstNameError("");
+        setLastNameError("");
+        setEmailAddressError("");
+        setPasswordError("");
+        setPhnNumbeError("");
+       
+    
+    
+        /*axios.post("/verifyUser" , {emailAddress : emailAddress}).then(res => {
 
             if(res.status === 200){
 
@@ -175,57 +229,65 @@ const handleSubmit = async() => {
                     emailAddress : emailAddress ,
                     password : password ,
                     phnNumber : phnNumber ,
-                    address : address
+                    address : address ,
+                    securityQuestionOne : securityQuestionOne 
+
                 }).then(res => {
                     if(res.status === 201){
                         setRegisterError("Registration SuccessFull")
-
-                        // Also write the code which navigates to the food payment page.
-
-
+                        naviagte('/chooseMenu'); 
                     }
 
 
                 })
             }
 
-        }) 
+        }) */
     
 }
 
 
 return (
+
     <>
+    <h1>SignUp</h1>
+    <br></br>
      <form> <label>First Name</label>
             <input type='firstName' onChange= {handleFirstName} />
+            {firstNameError}
             <br></br>
             <label>Last Name</label>
             <input type='lastName' onChange= {handleLastName} />
+            {lastNameError}
             <br></br>
             <label>E mail</label>
             <input type='email' onChange={handleEmail} />
+            {emailAddressError}
             <br></br>
             <label>Password</label>
             <input type = 'password' onChange = {handlePassWord}/>
+            {passWordError}
             <br></br>
             <label>Confirm Password</label>
             <input type = 'confirmPassword' onChange = {handleConfirmPassword}/>
+            {confirmPasswordError}
             <br></br>
             <label>Phone Number</label>
             <input type = 'phoneNumber' onChange = {handlePhoneNumber}/>
+            {phnNumberError}
             <br></br>
             <label>Address</label>
-            <input type = 'address' onChange =  { handleAdress }/>
+            <input type = 'address' onChange =  { handleAdress }/>  
             <br></br>
-         
+            <label>Security Question - Whats your Favourite city</label>
+            <input type = 'text' onChange =  { handleQ1 }/>  
+            <br></br>
+        
             <button onClick = {handleSubmit}>Submit</button>
         </form>
     </>
 
     
-
-    
-
 )
 
 };

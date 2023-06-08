@@ -12,6 +12,9 @@ const userAddressSchema = mongoose.Schema({
 
 });
 
+
+
+
 const userAddress = new mongoose.model("user-address", userAddressSchema);
 
 module.exports = userAddress;

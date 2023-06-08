@@ -25,8 +25,12 @@ const userSchema = mongoose.Schema({
         type : String ,
         required : false
     }
+    securityQuestionOne : {
+        type : String ,
+        required : true
+    }
 });
 
-const User = new mongoose.model("user", userSchema);
+const user = new mongoose.model("user", userSchema);
 
 module.exports = user;

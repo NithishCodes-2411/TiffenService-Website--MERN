@@ -39,6 +39,7 @@ const userRegisteration = async (req , res ) =>{
     const password = req.body.password;
     const phnNumber = req.body.phnNumber;
     const address = req.body.address;
+    const securityQuestionOne = req.body.securityQuestionOne;
 
     //Creating new user model in the DB
 
@@ -49,7 +50,8 @@ const userRegisteration = async (req , res ) =>{
             emailAddress ,
             password , 
             phnNumber ,
-            address
+            address ,
+            securityQuestionOne
         })
 
         await userAddressModel ({

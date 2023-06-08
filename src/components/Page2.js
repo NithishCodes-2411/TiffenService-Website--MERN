@@ -9,7 +9,7 @@ function TheGreenChutney() {
     const navigate = useNavigate();
 
     function myOnClick() {
-        navigate('/Signup')
+        navigate('/Login')
     }
 
 

@@ -46,14 +46,5 @@ function Contact() {
 };
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzKtP2n9WgXapFzuNTCw4eBLVq5KgfDHI80Ucm1n0bWLGAn9OmS1UmgT_iJMsdVSLRHig/exec';
-const form = document.forms['submit-to-google-sheet']
-
-window.addEventListener("submit", (event) => {
-  event.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
-})
 
 export default Contact;
