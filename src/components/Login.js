@@ -59,10 +59,10 @@ function Login() {
     console.log(emailaddress);
     console.log(password);
 
-    /*try {
+    try {
       if(success){
 
-        axios.post("/login" , {
+        axios.post("http://127.0.0.1:8000/signup/login" , {
           emailaddress : emailaddress ,
           password : password 
         })
@@ -85,7 +85,7 @@ function Login() {
     }
     catch (e){
       console.log(e);
-    }*/
+    }
 
   };
 
@@ -104,11 +104,11 @@ function Login() {
 
       <form>
       <label>E mail</label>
-        <input type="text" onChange={ handleEmail} placeholder="Email" />
+        <input type="text" onChange={ handleEmail}  />
         <h3>{emailAddressError}</h3>
         <br></br>
         <label>Password</label>
-        <input type="password" onChange={ handlePassword } placeholder="password" />
+        <input type="password" onChange={ handlePassword }  />
         <h3>{passwordError}</h3>
         <br></br>
      

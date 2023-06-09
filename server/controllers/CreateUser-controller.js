@@ -1,37 +1,37 @@
 const userModel = require("../models/user-models");
 const userAddressModel = require("../models/userAddress-module");
 
-const verifyUser = async (req , res) => {
-    
+const verifyUser = async (req, res) => {
+
     const emailAddress = req.body.emailAddress;
 
 
     // Checking if the user already exist  
-    try{
+    try {
 
         const getEmailAddress = await userModel.find({
-            emailAddress : emailAddress ,
+            emailAddress: emailAddress,
         })
-        if(getEmailAddress.length != 0){
+        if (getEmailAddress.length != 0) {
             res.status(400).json({
-                message : "User Already exists"
+                message: "User Already exists"
             })
         }
-        else{
+        else {
             res.status(200).json({
                 message: "No user found",
-              });
+            });
         }
     }
-    catch (error){
+    catch (error) {
         res.status(500).json({
-            message: "Internal server error " + err,
-          });
+            message: "Internal server error " + error,
+        });
     }
-   
+
 };
 
-const userRegisteration = async (req , res ) =>{
+const userRegisteration = async (req, res) => {
 
     const firstName = req.body.firstName;
     const lastName = req.body.lastName;
@@ -44,32 +44,32 @@ const userRegisteration = async (req , res ) =>{
     //Creating new user model in the DB
 
     try {
-        await userModel.create ({
-            firstName ,
-            lastName ,
-            emailAddress ,
-            password , 
-            phnNumber ,
-            address ,
+        await userModel.create({
+            firstName,
+            lastName,
+            emailAddress,
+            password,
+            phnNumber,
+            address,
             securityQuestionOne
         })
 
-        await userAddressModel ({
-            emailAddress ,
-             address
+        await userAddressModel({
+            emailAddress,
+            address
         })
 
         res.status(201).json({
             message: "User Registered Successfully",
-          });
+        });
     }
-    catch (error){
+    catch (error) {
         res.status(500).json({
             message: "Internal server error " + error
-          });
-    } 
+        });
+    }
 };
 
 module.exports = {
-    verifyUser , userRegisteration
+    verifyUser, userRegisteration
 };

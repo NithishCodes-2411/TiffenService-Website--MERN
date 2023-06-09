@@ -7,6 +7,16 @@ const  https = require('https')
 const http = require('http')
 const app = express()
 http.createServer(app).listen(80);*/
+const mongoose = require("mongoose")
+
+
+mongoose.connect("mongodb+srv://nituu2411:UoM96J6wpblKMhiZ@cluster0.tqmdo7f.mongodb.net/?retryWrites=true&w=majority")
+    .then(() => {
+        console.log("mongodb connected");
+    })
+    .catch(() => {
+        console.log('failed');
+    })
 
 const express = require("express")
 
@@ -16,14 +26,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-const {verifyUser , userRegisteration}  = require ("../controllers/CreateUser-controller");
-const {userLogin} = require("../controllers/Login- controllers");
+const { verifyUser, userRegisteration } = require("../controllers/CreateUser-controller");
+const { userLogin } = require("../controllers/Login- controllers");
 const router = express.Router();
 
 
-router.post("/verifyUser" ,  verifyUser);
-router.post("/userRegisteration" , userRegisteration);
-router.post("/login" , userLogin);
+app.post("/verifyUser", verifyUser);
+app.post("/userRegisteration", userRegisteration);
+// app.post("/login", userLogin);
+
+app.get("/", (req, res) => {
+    res.send("Hello world");
+})
 
 app.listen(8000, () => {
     console.log("port connected");
