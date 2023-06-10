@@ -28,12 +28,14 @@ app.use(cors());
 
 const { verifyUser, userRegisteration } = require("../controllers/CreateUser-controller");
 const { userLogin } = require("../controllers/Login- controllers");
-const router = express.Router();
+const { forgotPassword } = require("../controllers/ForgetPassword-controller")
+
 
 
 app.post("/verifyUser", verifyUser);
 app.post("/userRegisteration", userRegisteration);
-// app.post("/login", userLogin);
+app.post("/login", userLogin);
+app.post("/forgotPassword" , forgotPassword);
 
 app.get("/", (req, res) => {
     res.send("Hello world");

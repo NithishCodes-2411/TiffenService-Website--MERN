@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
 
+
 function ForgotPassword() {
 
     const [emailAddress, setEmailAddress] = useState("");
@@ -47,7 +48,6 @@ function ForgotPassword() {
     }
 
 
-        } else {
     /*This method gets called when there in an input in the answer for the security question field*/
     const handleQuestion = (e) => {
 
@@ -120,10 +120,32 @@ function ForgotPassword() {
         }
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
 
-        if()
+        e.preventDefault();
 
+
+
+        if(emailSuccess || passwordSuccess || q1Success || conPasswordSuccess){
+
+            axios.post("http://127.0.0.1:8000/forgotPassword" , {
+                emailAddress : emailAddress ,
+                securityQuestionOne : securityQuestionOne ,
+                newPassword : newPassword
+            }) ,
+            then(res => {
+                if(res.status === 201){
+                    navigate('/chooseMenu')
+
+                }
+            }).catch(error => {
+                setPasswordError("Email or security question were wrong")
+            });
+        }
+        else{
+            setPasswordError("All fields are mandatory")
+        }
+ 
     }
 
 
@@ -141,22 +163,28 @@ function ForgotPassword() {
         <>
         <h1>Reset Password</h1>
         <form>
-
                 <label>E mail</label>
                 <input type='email' onChange={handleEmailAddress} />
+                {emailAddressError}
+                <br></br>
 
                 <label>Security Question - Whats your Favourite city</label>
                 <input typt= 'text'onChange={handleQuestion}/>
+                {securityQuestionOneErro}
                 <br></br>
 
                 <label>New Password</label>
                 <input type='password' onChange={handlePassWord} />
+                {newPasswordError}
+                <br></br>
             
                 <label>Confirm Password</label>
                 <input type='password' onChange={handleConfirmPassword} />
-            
+                {confirmNewPasswordError}
+                <br></br>
             
                 <button onClick={handleSubmit}>Submit</button>
+                {passwordError}
         </form>
         </>
 

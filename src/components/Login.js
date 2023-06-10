@@ -54,7 +54,9 @@ function Login() {
 
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    
+    e.preventDefault();
 
     console.log(emailaddress);
     console.log(password);

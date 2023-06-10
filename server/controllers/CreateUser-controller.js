@@ -11,7 +11,9 @@ const verifyUser = async (req, res) => {
 
         const getEmailAddress = await userModel.find({
             emailAddress: emailAddress,
-        })
+        });
+
+
         if (getEmailAddress.length != 0) {
             res.status(400).json({
                 message: "User Already exists"
