@@ -5,7 +5,6 @@ const verifyUser = async (req, res) => {
 
     const emailAddress = req.body.emailAddress;
 
-
     // Checking if the user already exist  
     try {
 

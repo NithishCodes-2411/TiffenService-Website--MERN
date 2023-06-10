@@ -28,7 +28,7 @@ app.use(cors());
 
 const { verifyUser, userRegisteration } = require("../controllers/CreateUser-controller");
 const { userLogin } = require("../controllers/Login- controllers");
-const { forgotPassword} = require("../controllers/ForgotPassword-controller");
+const  forgotPassword = require("../controllers/ForgotPassword-controller");
 
 
 
@@ -43,17 +43,10 @@ app.post("/userRegisteration", function(req, res){
 app.post("/login",function(req, res){
     userLogin.userLogin
   });
-app.post("/forgotPassword" , function(req, res){
-    forgotPassword.forgotPassword
-
-  });
+  app.post("/forgotPassword", forgotPassword);
 
 
 app.listen(8000, () => {
     console.log("port connected");
 })
 
-app.get("/" ,(req ,res) => {
-    res.send("helloworld");
-    console.log("xyz")
-})
