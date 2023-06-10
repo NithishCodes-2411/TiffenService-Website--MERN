@@ -28,19 +28,32 @@ app.use(cors());
 
 const { verifyUser, userRegisteration } = require("../controllers/CreateUser-controller");
 const { userLogin } = require("../controllers/Login- controllers");
-const { forgotPassword } = require("../controllers/ForgetPassword-controller")
+const { forgotPassword} = require("../controllers/ForgotPassword-controller");
 
 
 
-app.post("/verifyUser", verifyUser);
-app.post("/userRegisteration", userRegisteration);
-app.post("/login", userLogin);
-app.post("/forgotPassword" , forgotPassword);
+app.post("/verifyUser", function(req, res){
+     verifyUser.verifyUser
+  });
 
-app.get("/", (req, res) => {
-    res.send("Hello world");
-})
+app.post("/userRegisteration", function(req, res){
+    userRegisteration.userRegisteration;
+    
+  });
+app.post("/login",function(req, res){
+    userLogin.userLogin
+  });
+app.post("/forgotPassword" , function(req, res){
+    forgotPassword.forgotPassword
+
+  });
+
 
 app.listen(8000, () => {
     console.log("port connected");
+})
+
+app.get("/" ,(req ,res) => {
+    res.send("helloworld");
+    console.log("xyz")
 })

@@ -55,7 +55,7 @@ function Login() {
   }
 
   const handleSubmit = (e) => {
-    
+
     e.preventDefault();
 
     console.log(emailaddress);
@@ -95,6 +95,10 @@ function Login() {
     naviagte('/Signup');
   }
 
+  const haandleForgotPassword = () => {
+    naviagte ('/forgotPassword');
+  }
+
 
 
 
@@ -118,9 +122,11 @@ function Login() {
       </form>
       <br></br>
       <button onClick= {handleSignUp}>Sign up</button>
+      <button onClick = {haandleForgotPassword}>Forgot Password</button>
 
 
     </>
+
   )
 }
 export default Login;

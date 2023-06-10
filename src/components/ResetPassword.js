@@ -1,11 +1,13 @@
 
 import React from 'react';
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
-function ForgotPassword() {
+
+
+function ResetPassword() {
 
     const [emailAddress, setEmailAddress] = useState("");
     const [emailSuccess, setEmailSuccess] = useState(false);
@@ -21,7 +23,9 @@ function ForgotPassword() {
     const [confirmNewPasswordError, setConfirmNewPasswordError] = useState("");
     const [passwordError, setPasswordError] = useState("");
 
-    const navigate = useHistory();
+    const naviagte = useNavigate();
+
+   
 
 
     /* This method gets called when there is an input in email field */
@@ -56,7 +60,7 @@ function ForgotPassword() {
         let sqOneRegex = /^[a-zA-Z ]+$/;
         let error = "";
         if(!sqOne.trim()) {
-            err = "Security Question Answer cannot be empty";
+            error = "Security Question Answer cannot be empty";
             setQ1Success(false);
         } else if(!sqOneRegex.test(sqOne)) {
             error = "Security Question Answer should only have alphabets";
@@ -106,11 +110,11 @@ function ForgotPassword() {
         let error = "";
         if (!confirmPass.trim()) {
             error = "confirm password cannot be empty";
-            SetconfirmPasswordError(error);
+            setConfirmNewPasswordError(error);
         }
         else if (newPassword !== confirmPass) {
             error = "Password  does not match";
-            SetconfirmPasswordError(error);
+            setConfirmNewPasswordError(error);
         }
         else {
         
@@ -124,23 +128,30 @@ function ForgotPassword() {
 
         e.preventDefault();
 
+        console.log({  emailAddress ,
+            securityQuestionOne ,
+             newPassword
+        }) ;
+
 
 
         if(emailSuccess || passwordSuccess || q1Success || conPasswordSuccess){
 
-            axios.post("http://127.0.0.1:8000/forgotPassword" , {
+            axios.post( "http://127.0.0.1:8000/forgotPassword" , {
                 emailAddress : emailAddress ,
                 securityQuestionOne : securityQuestionOne ,
                 newPassword : newPassword
-            }) ,
-            then(res => {
+            }) 
+            .then(res => {
                 if(res.status === 201){
-                    navigate('/chooseMenu')
+                    naviagte('/chooseMenu')
 
                 }
             }).catch(error => {
                 setPasswordError("Email or security question were wrong")
             });
+
+
         }
         else{
             setPasswordError("All fields are mandatory")
@@ -148,16 +159,6 @@ function ForgotPassword() {
  
     }
 
-
-      
-
-
-        
-
-
-
-
-    
 
     return (
         <>
@@ -170,7 +171,7 @@ function ForgotPassword() {
 
                 <label>Security Question - Whats your Favourite city</label>
                 <input typt= 'text'onChange={handleQuestion}/>
-                {securityQuestionOneErro}
+                {securityQuestionOneError}
                 <br></br>
 
                 <label>New Password</label>
@@ -180,7 +181,7 @@ function ForgotPassword() {
             
                 <label>Confirm Password</label>
                 <input type='password' onChange={handleConfirmPassword} />
-                {confirmNewPasswordError}
+                {confirmNewPassword}
                 <br></br>
             
                 <button onClick={handleSubmit}>Submit</button>
@@ -192,4 +193,4 @@ function ForgotPassword() {
 
     }
 
-export default ForgotPassword;
+export default ResetPassword;
