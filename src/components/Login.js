@@ -34,6 +34,7 @@ function Login() {
     }
     else{
       setSuccess(true);
+      setEmailAddress(email);
     }
     setEmailAddressError(error);
   }
@@ -50,6 +51,7 @@ function Login() {
     }
     else{
       setSuccess(true);
+      setPassword(passWord);
     }
 
   }
@@ -119,6 +121,7 @@ function Login() {
         <br></br>
      
         <button  onClick={handleSubmit} >Submit</button>
+        {loginError}
       </form>
       <br></br>
       <button onClick= {handleSignUp}>Sign up</button>
